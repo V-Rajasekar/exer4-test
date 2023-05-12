@@ -12,7 +12,8 @@ jobs:
         with:
           path: ~/.npm
           key: buildCache
-      - run: npm ci
+      - run: npm ci # instruct it to install the packages it depends on based on the package-lock file in the repository. The difference here is that npm
+                    # ci is used in automated environments such as CI pipelines.
       - run: npm test -- --coverage
         env:
           CI: true
