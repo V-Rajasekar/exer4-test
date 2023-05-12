@@ -42,7 +42,7 @@ jobs:
           with:
             name: build
         - name: deploy to surge
-          run: npx surge –project ‘.’ –domain melted-chickens.surge.sh
+          run: npx surge –project ‘.’ –domain all-time-dosa.surge.sh
           env:
             SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
             SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}  
