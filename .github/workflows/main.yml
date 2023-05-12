@@ -35,14 +35,14 @@ jobs:
     needs: build
     environment:
          name: production
-         url: http://all-time-dosa.surge.sh
+         url: http://rajasekar-v.surge.sh
     steps:
         - name: Download the Build Artifact
           uses: actions/download-artifact@v3.0.0
           with:
             name: build
         - name: deploy to surge
-          run: npx surge --project '.' --domain all-time-dosa.surge.sh
+          run: npx surge --project '.' --domain rajasekar-v.surge.sh
           env:
             SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
             SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}  
