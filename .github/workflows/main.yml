@@ -30,11 +30,11 @@ jobs:
         with:
           name: build
           path: build
-deploy:
+  deploy:
     runs-on: ubuntu-latest
     needs: build
     environment:
-       - name: production
+         name: production
          url: http://all-time-dosa.surge.sh
     steps:
         - name: Download the Build Artifact
